@@ -1,13 +1,16 @@
+// index.js
+
+// importa la libreria express
 const express = require('express');
 
-const port = process.env.PORT || 3000;
-
+// crea el objeto app
 const app = express();
 
-app.use(express.static('public'));
-
+// la app responde con Hello world
+// a todas las peticiones GET a /
 app.get('/', (req, res) => {
   res.send('Hello world');
 });
 
-app.listen(port);
+// el server escucha en el puerto 3000
+app.listen(3000);
